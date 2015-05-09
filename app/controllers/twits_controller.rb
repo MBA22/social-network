@@ -2,10 +2,11 @@ class TwitsController < ApplicationController
 
   def index
     @twit = Twit.all
+   #@twit = Twit.find(params[:id])
   end
 
   def show
-    @twit = Twit.find(params[:id])
+   @twit = Twit.find(params[:id])
   end
 
   def new
