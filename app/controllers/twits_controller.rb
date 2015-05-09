@@ -13,7 +13,7 @@ class TwitsController < ApplicationController
   end
 
   def create
-   @twit = Twit.new(params.require(:twit).permit(:text, :text))
+   @twit = Twit.new(params.require(:twits).permit(:text, :text))
    @twit.save
    redirect_to @twit
   end
