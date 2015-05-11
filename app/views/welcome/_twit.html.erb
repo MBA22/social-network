@@ -1,5 +1,8 @@
- <% @twit.each do |twit| %>
-   <tr>
-     <td><%= twit.text %></td></br>
-   </tr>
+<%= form_for @twit, :url => twits_path, :html => { :multipart => true } do |form| %>
+  <%= form.file_field :picture %>
+    <% @twit.each do |twit| %>
+      <tr>
+        <td><%= twit.text %></td></br>
+      </tr>
+    <% end %>
  <% end %>
